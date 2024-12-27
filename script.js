@@ -40,13 +40,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
   }
 
-  function handleMouseMove(e) {
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
-
+  function handleInteraction(x, y) {
     stars.forEach(star => {
-      const dx = star.x - mouseX;
-      const dy = star.y - mouseY;
+      const dx = star.x - x;
+      const dy = star.y - y;
       const distance = Math.sqrt(dx * dx + dy * dy);
 
       if (distance < 150) {
@@ -56,20 +53,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
   }
 
+  function handleMouseMove(e) {
+    handleInteraction(e.clientX, e.clientY);
+  }
+
   function handleTouchMove(e) {
-    const touchX = e.touches[0].clientX;
-    const touchY = e.touches[0].clientY;
-
-    stars.forEach(star => {
-      const dx = star.x - touchX;
-      const dy = star.y - touchY;
-      const distance = Math.sqrt(dx * dx + dy * dy);
-
-      if (distance < 150) {
-        star.dx += dx * 0.001;
-        star.dy += dy * 0.001;
-      }
-    });
+    handleInteraction(e.touches[0].clientX, e.touches[0].clientY);
   }
 
   function animate() {
@@ -86,7 +75,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   });
 
   canvas.addEventListener('mousemove', handleMouseMove);
-  canvas.addEventListener('touchmove', handleTouchMove); // إضافة حدث التاتش مباشرة إلى الكانفاس
+  canvas.addEventListener('touchmove', handleTouchMove);
 
   document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault();

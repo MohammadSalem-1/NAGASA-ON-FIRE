@@ -55,6 +55,21 @@ function handleMouseMove(e) {
   });
 }
 
+function handleTouchMove(e) {
+  const touchX = e.touches[0].clientX;
+  const touchY = e.touches[0].clientY;
+
+  stars.forEach(star => {
+    const dx = star.x - touchX;
+    const dy = star.y - touchY;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+
+    if (distance < 150) {
+      star.dx += dx * 0.001;
+      star.dy += dy * 0.001;
+    }
+  });
+}
 
 function animate() {
   drawStars();
@@ -70,19 +85,20 @@ window.addEventListener('resize', () => {
 });
 
 window.addEventListener('mousemove', handleMouseMove);
+window.addEventListener('touchmove', handleTouchMove); // Ø¥Ø¶Ø§ÙØ© Ø­Ø¯Ø« Ø§Ù„ØªØ§ØªØ´
 
-// ÊÍŞŞ ãä ÕÍÉ ÇáÈíÇäÇÊ ÇáãÏÎáÉ
+// ØªØ­ÙƒÙ… Ù…Ù† ØµÙØ­Ø© Ø§Ù„Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„Ù…Ø¯Ø®Ù„Ø©
 document.getElementById('loginForm').addEventListener('submit', function(event) {
-  event.preventDefault(); // ãäÚ ÅÑÓÇá ÇáäãæĞÌ
+  event.preventDefault(); // Ù…Ù†Ø¹ Ø¥Ø±Ø³Ø§Ù„ Ø§Ù„Ù†Ù…ÙˆØ°Ø¬
 
   const username = document.getElementById('username').value;
   const password = document.getElementById('password').value;
 
   if (!username || !password) {
-    alert('íÑÌì ÅÏÎÇá ÇÓã ÇáãÓÊÎÏã æßáãÉ ÇáãÑæÑ');
+    alert('ÙŠØ¬Ø¨ Ø¥Ø¯Ø®Ø§Ù„ Ø§Ø³Ù… Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù… ÙˆÙƒÙ„Ù…Ø© Ø§Ù„Ù…Ø±ÙˆØ±');
     return;
   }
 
-  // ÅÑÓÇá ÇáãÓÊÎÏã Åáì áæÍÉ ÇáÊÍßã ÈÚÏ ÇáÊÍŞŞ
+  // Ø¥Ø±Ø³Ø§Ù„ Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù… Ø¥Ù„Ù‰ Ù„ÙˆØ­Ø© Ø§Ù„ØªØ­ÙƒÙ… Ø¨Ø¹Ø¯ Ø§Ù„ØªØ­Ù‚Ù‚
   window.location.href = "dashboard.html";
 });

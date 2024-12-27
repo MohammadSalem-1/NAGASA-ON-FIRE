@@ -1,9 +1,15 @@
-/*  ‰”Ìﬁ ⁄«„ ·’›Õ… «·√·⁄«» */
+/* √ä√§√ì√≠√û √ö√á√£ √°√ï√ù√ç√â √á√°√É√°√ö√á√à */
 body {
   font-family: 'Orbitron', sans-serif;
   margin: 0;
   background: radial-gradient(circle, #0f0f3e, #010118);
   overflow: hidden;
+}
+
+body {
+  font-family: 'Arial', 'Helvetica', 'Tahoma', 'Verdana', sans-serif;
+  direction: rtl;
+  text-align: right;
 }
 
 #galaxy {

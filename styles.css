@@ -1,3 +1,8 @@
+
+body, html {
+  touch-action: manipulation; /* This tells the browser how to handle touch events */
+}
+
 body {
   margin: 0;
   overflow: hidden;

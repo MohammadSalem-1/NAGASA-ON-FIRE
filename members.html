@@ -3,60 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galaxy of NAGASA - ลฯวัษ วแรฺึวม</title>
+  <title>Galaxy of NAGASA - ุฅุฏุงุฑุฉ ุงูุฃุนุถุงุก</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div id="galaxy">
     <canvas id="stars"></canvas>
     <div class="members-container">
-      <h1>ลฯวัษ วแรฺึวม - Galaxy of NAGASA</h1>
+      <h1>ุฅุฏุงุฑุฉ ุงูุฃุนุถุงุก - Galaxy of NAGASA</h1>
       
-      <!-- ลึวÝษ ฺึๆ ฬฯํฯ -->
+      <!-- ุฅุถุงูุฉ ุนุถู ุฌุฏูุฏ -->
       <div class="add-member">
-        <h2>ลึวÝษ ฺึๆ ฬฯํฯ</h2>
+        <h2>ุฅุถุงูุฉ ุนุถู ุฌุฏูุฏ</h2>
         <form id="addMemberForm">
-          <input type="text" id="memberName" placeholder="วำใ วแฺึๆ" required />
+          <input type="text" id="memberName" placeholder="ุงุณู… ุงูุนุถู" required />
           <select id="memberRole" required>
-            <option value="">วฮสั วแฯๆั</option>
-            <option value="ใฯัศ">ใฯัศ</option>
-            <option value="แวฺศ">แวฺศ</option>
-            <option value="ลฯวัํ">ลฯวัํ</option>
+            <option value="">ุงุฎุชุฑ ุงูุฏูุฑ</option>
+            <option value="ู…ุฏุฑุจ">ู…ุฏุฑุจ</option>
+            <option value="ูุงุนุจ">ูุงุนุจ</option>
+            <option value="ุฅุฏุงุฑู">ุฅุฏุงุฑู</option>
           </select>
           <select id="memberStatus" required>
-            <option value="">วฮสั วแอวแษ</option>
-            <option value="ไิุ">ไิุ</option>
-            <option value="Ûํั ไิุ">Ûํั ไิุ</option>
+            <option value="">ุงุฎุชุฑ ุงูุญุงูุฉ</option>
+            <option value="ูุดุท">ูุดุท</option>
+            <option value="ุบูุฑ ูุดุท">ุบูุฑ ูุดุท</option>
           </select>
-          <button type="submit">ลึวÝษ ฺึๆ</button>
+          <button type="submit">ุฅุถุงูุฉ ุนุถู</button>
         </form>
       </div>
 
-      <!-- Þวฦใษ วแรฺึวม -->
+      <!-- ูุงุฆู…ุฉ ุงูุฃุนุถุงุก -->
       <div class="member-list-container">
-        <h2>Þวฦใษ วแรฺึวม</h2>
+        <h2>ูุงุฆู…ุฉ ุงูุฃุนุถุงุก</h2>
         <table class="member-table">
           <thead>
             <tr>
-              <th>วแวำใ</th>
-              <th>วแฯๆั</th>
-              <th>วแอวแษ</th>
-              <th>ลฬัวมวส</th>
+              <th>ุงูุงุณู…</th>
+              <th>ุงูุฏูุฑ</th>
+              <th>ุงูุญุงูุฉ</th>
+              <th>ุฅุฌุฑุงุกุงุช</th>
             </tr>
           </thead>
           <tbody id="memberList">
-            <!-- วแรฺึวม ำํูๅัๆไ ๅไว -->
+            <!-- ุงูุฃุนุถุงุก ุณูุธูุฑูู ููุง -->
             <tr>
-              <td>รอใฯ ฺศฯ วแแๅ</td>
-              <td>ใฯัศ</td>
-              <td>ไิุ</td>
-              <td><a href="#" class="action-link">สฺฯํแ</a> | <a href="#" class="action-link">อะÝ</a></td>
+              <td>ุฃุญู…ุฏ ุนุจุฏ ุงููู</td>
+              <td>ู…ุฏุฑุจ</td>
+              <td>ูุดุท</td>
+              <td><a href="#" class="action-link">ุชุนุฏูู</a> | <a href="#" class="action-link">ุญุฐู</a></td>
             </tr>
             <tr>
-              <td>ำวัษ ใอใฯ</td>
-              <td>แวฺศ</td>
-              <td>Ûํั ไิุ</td>
-              <td><a href="#" class="action-link">สฺฯํแ</a> | <a href="#" class="action-link">อะÝ</a></td>
+              <td>ุณุงุฑุฉ ู…ุญู…ุฏ</td>
+              <td>ูุงุนุจ</td>
+              <td>ุบูุฑ ูุดุท</td>
+              <td><a href="#" class="action-link">ุชุนุฏูู</a> | <a href="#" class="action-link">ุญุฐู</a></td>
             </tr>
           </tbody>
         </table>

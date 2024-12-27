@@ -3,12 +3,9 @@ body {
   overflow: hidden;
   font-family: 'Orbitron', sans-serif;
   background: radial-gradient(circle, #0f0f3e, #010118);
-}
-
-body {
-  font-family: 'Arial', 'Helvetica', 'Tahoma', 'Verdana', sans-serif;
   direction: rtl;
   text-align: right;
+  touch-action: manipulation; /* يسمح للمتصفح بالتحكم في أحداث التاتش */
 }
 
 #galaxy {
@@ -21,26 +18,7 @@ canvas {
   position: absolute;
   top: 0;
   left: 0;
-}
-
-body {
-  font-family: 'Orbitron', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: radial-gradient(circle, #0f0f3e, #010118);
-  color: #ffffff;
-}
-
-#galaxy {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-}
-
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
+  touch-action: manipulation; /* يسمح للكانفاس بالتفاعل مع التاتش */
 }
 
 .dashboard-container {
@@ -115,7 +93,6 @@ h1 {
   }
 }
 
-
 .shortcut-link {
   display: inline-block;
   margin-top: 10px;
@@ -131,25 +108,6 @@ h1 {
   background-color: #00bebe;
 }
 
-body {
-  margin: 0;
-  overflow: hidden;
-  font-family: 'Orbitron', sans-serif;
-  background: radial-gradient(circle, #0f0f3e, #010118);
-}
-
-#galaxy {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-}
-
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 .members-container {
   position: absolute;
   top: 50%;
@@ -159,11 +117,6 @@ canvas {
   color: #ffffff;
   width: 80%;
   max-width: 1000px;
-}
-
-h1 {
-  font-size: 30px;
-  margin-bottom: 20px;
 }
 
 h2 {
@@ -233,8 +186,6 @@ table td {
   color: #00bebe;
 }
 
-
-
 .login-container {
   position: absolute;
   top: 50%;
@@ -254,12 +205,6 @@ table td {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-}
-
-h1 {
-  color: #00e6e6;
-  margin-bottom: 20px;
-  font-size: 24px;
 }
 
 input, button {
@@ -300,8 +245,7 @@ button:active {
   border: 2px solid #00e6e6;
 }
 
-.dashboard-container .section-container {
-  display: flex;
+.dashboard-container .section-container {display: flex;
   justify-content: space-around;
   margin-top: 40px;
 }
@@ -324,22 +268,7 @@ button:active {
   font-size: 14px;
 }
 
-/* ÅÖÇÝÉ ÊäÓíÞÇÊ ÌÏíÏÉ ááÃÚÖÇÁ */
-.section-container {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 40px;
-}
-
-.section {
-  background: rgba(10, 10, 25, 0.8);
-  padding: 20px;
-  border-radius: 10px;
-  width: 250px;
-  color: #fff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
-}
-
+/* إعدادات تنسيق جديدة للأعضاء */
 #members-list {
   margin-top: 20px;
   padding: 10px;
@@ -385,7 +314,7 @@ button:active {
   background-color: #00bebe;
 }
 
-/* ÅÖÇÝÉ ÊäÓíÞÇÊ ÌÏíÏÉ ááÃáÚÇÈ */
+/* إعدادات تنسيق جديدة للألعاب */
 .games-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -426,77 +355,3 @@ button:active {
 .game-card button:hover {
   background-color: #00bebe;
 }
-
-.game-card button:active {
-  background-color: #008c8c;
-}
-
-/* ÊäÓíÞ ÚÇã áÌãíÚ ÇáÕÝÍÇÊ */
-body {
-  font-family: 'Orbitron', sans-serif;
-  margin: 0;
-  background: radial-gradient(circle, #0f0f3e, #010118);
-  overflow: hidden;
-}
-
-#galaxy {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-}
-
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* ÊäÓíÞ ÇáÚäæÇä ÇáÑÆíÓí */
-.header-container {
-  position: relative;
-  z-index: 10;
-  padding: 30px;
-  text-align: center;
-  color: #fff;
-}
-
-h1 {
-  font-size: 50px;
-  color: #00e6e6;
-  margin-bottom: 20px;
-}
-
-/* ÊäÓíÞ ÔÑíØ ÇáÊäÞá */
-.navigation {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.navigation a {
-  font-size: 20px;
-  text-decoration: none;
-  color: #fff;
-  padding: 10px 20px;
-  background-color: rgba(10, 10, 25, 0.7);
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.navigation a:hover {
-  background-color: #00e6e6;
-  color: #010118;
-}
-
-/* ÊäÓíÞ ÇáÎáÝíÉ ÇáãÊÍÑßÉ */
-@keyframes starMovement {
-  from {
-    transform: translateX(0) translateY(0);
-  }
-  to {
-    transform: translateX(-100%) translateY(-100%);
-  }
-}
-

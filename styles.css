@@ -7,6 +7,12 @@ body {
   color: #ffffff;
 }
 
+.dashboard-container {
+  position: relative;
+  z-index: 10;  /* هذا يجعل العناصر داخل .dashboard-container فوق الـcanvas */
+}
+
+
 /* إعدادات الخلفية المتحركة (النجوم) */
 #galaxy {
   position: relative;

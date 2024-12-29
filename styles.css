@@ -6,6 +6,40 @@ body {
   background: radial-gradient(circle, #0f0f3e, #010118);
   color: #ffffff;
 }
+/* إضافة دعم اللمس على العناصر */
+* {
+  -webkit-tap-highlight-color: transparent; /* إزالة التمييز عند اللمس على الأجهزة المحمولة */
+  touch-action: manipulation; /* تفعيل التفاعل مع الأزرار */
+}
+
+button, .action-link {
+  /* جعل الأزرار والروابط تفاعلية على الشاشات التي تدعم اللمس */
+  touch-action: manipulation;
+  -webkit-touch-callout: none; /* إزالة القائمة السياقية عند اللمس */
+  -webkit-user-select: none; /* منع تحديد النص */
+  user-select: none; /* منع تحديد النص */
+}
+
+/* ضبط خصائص الروابط والأزرار */
+.action-link {
+  cursor: pointer; /* إضافة إشارة التفاعل عند التمرير */
+}
+
+button {
+  cursor: pointer; /* نفس الشيء للأزرار */
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.98); /* تأثير النقر على الأزرار */
+}
+
+/* جعل الأزرار أكثر وضوحًا على الشاشات التي تدعم اللمس */
+button:focus, .action-link:focus {
+  outline: none;
+  border: 2px solid #00e6e6;
+}
+
 
 /* إعدادات الخلفية المتحركة (النجوم) */
 #galaxy {
